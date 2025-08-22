@@ -63,7 +63,7 @@ namespace SunokoLibrary.Windows.Forms
             {
                 try
                 {
-                    var url = new Uri("https://www.nicovideo.jp/my/channel");
+                    var url = new Uri("https://www.nicovideo.jp/my/");
                     var container = new CookieContainer();
                     container.PerDomainCapacity = 200;
                     var client = new HttpClient(new HttpClientHandler() { CookieContainer = container });
