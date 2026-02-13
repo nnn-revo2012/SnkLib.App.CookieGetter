@@ -71,17 +71,7 @@ namespace SunokoLibrary.Windows.Forms
                     var result = await cookieImporter.GetCookiesAsync(url);
                     var sts = result.AddTo(container);
                     if (sts != CookieImportState.Success)
-                    {
-                        if (sts == CookieImportState.AccessError)
-                        {
-                            return "**ブラウザを閉じてください**";
-                        }
-                        else
-                        {
-                            return null;
-                        }
-                    }
-
+                        return null;
                     var res = await client.GetStringAsync(url);
                     if (string.IsNullOrEmpty(res))
                         return null;
